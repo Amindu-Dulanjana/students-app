@@ -51,17 +51,20 @@
     <div class="modal fade" id="studentEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header text-center">
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Edit Student Details</h1>
                 </div>
                 <div class="modal-body" id="taskEditContent">
                     <form @submit.prevent="updateStudent">
                         <div class="row">
-                            <div class="col-6 offset-3">
+                            <div class="col-12">
                                 <div class="form-group">
+                                    <label class="col-12">Student Name</label>
                                     <input class="form-control" type="text" name="name" v-model="studentUpdate.name" placeholder="Student Name" aria-label="default input example" required/>
-                                    <input class="form-control mt-4" type="number" name="age" aria-label="default input example" v-model="studentUpdate.age" required placeholder="Student Age"/>
-                                    <button class="btn btn-primary col-12 mt-2" type="submit">Update Data</button>
+                                    
+                                    <label class="col-12 mt-2">Student Age</label>
+                                    <input class="form-control" type="number" name="age" aria-label="default input example" v-model="studentUpdate.age" required placeholder="Student Age"/>
+                                    <button class="btn btn-success col-12 mt-4" type="submit">Update Data</button>
                                 </div>
                             </div>
                         </div>
